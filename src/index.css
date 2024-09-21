@@ -1136,6 +1136,7 @@ table > tbody tr td {
 }
 
 .more-filters {
+  height: 47px;
   display: flex;
   align-items: center;
   padding: 10px 16px;
