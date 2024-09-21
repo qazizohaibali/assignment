@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import propTypes from "prop-types";
 import { ReactComponent as FilterC } from "../assets/mambers/FilterC.svg";
 import { ReactComponent as ArrowDown } from "../assets/mambers/arrow-down.svg";
-import Avatar1  from "../assets/mambers/avatars/Avatar1.svg";
-import Avatar2  from "../assets/mambers/avatars/Avatar2.svg";
-import Avatar3  from "../assets/mambers/avatars/Avatar3.svg";
-import Avatar4  from "../assets/mambers/avatars/Avatar4.svg";
-import Avatar5  from "../assets/mambers/avatars/Avatar5.svg";
-import Avatar6  from "../assets/mambers/avatars/Avatar6.svg";
-import Avatar7  from "../assets/mambers/avatars/Avatar7.svg";
-import Avatar8  from "../assets/mambers/avatars/Avatar8.svg";
-import Avatar9  from "../assets/mambers/avatars/Avatar9.svg";
+import Avatar1 from "../assets/mambers/avatars/Avatar1.svg";
+import Avatar2 from "../assets/mambers/avatars/Avatar2.svg";
+import Avatar3 from "../assets/mambers/avatars/Avatar3.svg";
+import Avatar4 from "../assets/mambers/avatars/Avatar4.svg";
+import Avatar5 from "../assets/mambers/avatars/Avatar5.svg";
+import Avatar6 from "../assets/mambers/avatars/Avatar6.svg";
+import Avatar7 from "../assets/mambers/avatars/Avatar7.svg";
+import Avatar8 from "../assets/mambers/avatars/Avatar8.svg";
+import Avatar9 from "../assets/mambers/avatars/Avatar9.svg";
 import Checkbox from "./Checkbox";
 import "../assets/css/table.css";
 import Pagination from "./Pagination/Pagination";
@@ -126,6 +126,7 @@ const TableView = ({
     Avatar9,
   ];
 
+
   return (
     <>
       <div className="w-full overflow-hidden sticky-table mob-table d-block d-lg-none">
@@ -175,9 +176,9 @@ const TableView = ({
                               style={{ fontSize: "16px", marginLeft: "10px" }}
                             />
                             <div className="d-flex align-items-center">
-                            <img src={Avatar} className="" />
+                              <img src={Avatar} className="" />
                               <div className="d-flex me-2 flex-column text-start ms-3">
-                                <span>
+                                <span className="user-title">
                                   {item.first_name ? item.first_name : ""}
                                 </span>
                                 <span>{item?.user_id?.email}</span>
@@ -244,7 +245,7 @@ const TableView = ({
                             {/* <AvatarComponent /> */}
                             <img src={Avatar} className="" />
                             <div className="d-flex me-2 flex-column text-start ms-3">
-                              <span>
+                              <span className="user-title">
                                 {item.first_name ? item.first_name : ""}
                               </span>
                               <span>{item?.user_id?.email}</span>

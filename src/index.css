@@ -1147,6 +1147,15 @@ table > tbody tr td {
   font-weight: 600;
   line-height: 20px;
   text-align: left;
-  color: #777B74;
+  color: #777b74;
   cursor: pointer;
+}
+
+.user-title {
+  color: #1f1f1e !important;
+  font-family: "Heebo", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  text-align: left !important;
 }
